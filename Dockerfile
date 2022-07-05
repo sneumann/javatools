@@ -16,7 +16,7 @@ RUN mvn clean package install
 
 FROM openjdk:17-slim-bullseye
 
-COPY --from=builder /javatools/target/javatools-1.0-SNAPSHOT.jar /javatools.jar
+COPY --from=builder /javatools/target/javatools.jar /javatools.jar
 
 WORKDIR /
 
