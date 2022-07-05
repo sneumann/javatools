@@ -57,3 +57,20 @@ java -cp nmredata-editor.jar de.unikoeln.chemie.nmr.ui.cl.CheckFormat <yourfile.
 ```
 
 You can also download the nmredata-app.jar, which contains only the application classes and not the dependencies. For dependencies, consult the [pom file](https://github.com/NMReDATAInitiative/javatools/blob/master/app/pom.xml).
+
+# Docker 
+
+## Build 
+
+If a Docker environment is available, a container can be built by:
+```
+docker build -t javatools:latest .
+```
+
+## Run 
+
+An example to run is:
+```
+docker run --rm -v $PWD/lib/src/test/resources/de/unikoeln/chemie/nmr:/data javatools:latest  /data/cmcse.sdf /data/test.jdx
+```
+
